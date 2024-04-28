@@ -76,6 +76,7 @@ Route::prefix('admin')->middleware('auth')->group(function ()
     Route::resource('product', 'App\Http\Controllers\ProductController');
     Route::resource('category', 'App\Http\Controllers\CategoryController');
     Route::resource('subcategory', 'App\Http\Controllers\SubCategoryController');
+    Route::resource('brand', 'App\Http\Controllers\BrandController');
 
 });
     
