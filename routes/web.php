@@ -53,9 +53,7 @@ Route::get('/contact', function () {
     return view('Frontend.contact');
 });
 
-Route::get('/admin', function () {
-    return view('admin.index');
-});
+
 
 Route::get('/dashboard', function () {
     return view('admin.index');
@@ -66,5 +64,21 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+
+
+
+Route::prefix('admin')->middleware('auth')->group(function ()
+{
+    Route::get('/', function () {
+        return view('admin.index');
+    });
+    Route::resource('product', 'App\Http\Controllers\ProductController');
+    Route::resource('category', 'App\Http\Controllers\CategoryController');
+    Route::resource('subcategory', 'App\Http\Controllers\SubCategoryController');
+
+});
+    
+
 
 require __DIR__.'/auth.php';

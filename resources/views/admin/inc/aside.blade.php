@@ -2,7 +2,7 @@
 				<!-- Brand Logo -->
 				<a href="/admin" class="brand-link">
 					<img src="{{asset('adminAssets/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-					<span class="brand-text font-weight-light">LARAVEL SHOP</span>
+					<span class="brand-text font-weight-light">ONLINE SHOP</span>
 				</a>
 				<!-- Sidebar -->
 				<div class="sidebar">
@@ -18,13 +18,14 @@
 								</a>																
 							</li>
 							<li class="nav-item">
-								<a href="categories.html" class="nav-link">
+								<a href="{{route('category.index')}}" class="nav-link">
 									<i class="nav-icon fas fa-file-alt"></i>
 									<p>Category</p>
 								</a>
 							</li>
+							
 							<li class="nav-item">
-								<a href="subcategory.html" class="nav-link">
+								<a href="{{route('subcategory.index')}}" class="nav-link">
 									<i class="nav-icon fas fa-file-alt"></i>
 									<p>Sub Category</p>
 								</a>
@@ -38,7 +39,7 @@
 								</a>
 							</li>
 							<li class="nav-item">
-								<a href="products.html" class="nav-link">
+								<a href="{{route('product.index')}}" class="nav-link">
 									<i class="nav-icon fas fa-tag"></i>
 									<p>Products</p>
 								</a>
